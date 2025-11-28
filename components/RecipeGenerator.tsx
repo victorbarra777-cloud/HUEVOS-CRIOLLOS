@@ -30,7 +30,7 @@ const RecipeGenerator: React.FC = () => {
   };
 
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 bg-white/90 backdrop-blur-sm border-t border-white/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center p-3 bg-farm-orange/10 rounded-full text-farm-orange mb-4">
@@ -42,7 +42,7 @@ const RecipeGenerator: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-farm-cream rounded-2xl p-6 md:p-10 shadow-sm border border-farm-yellow/30">
+        <div className="bg-farm-cream/80 rounded-2xl p-6 md:p-10 shadow-sm border border-farm-yellow/30">
           <form onSubmit={handleGenerate} className="space-y-4">
             <div>
               <label htmlFor="preferences" className="block text-sm font-medium text-gray-700 mb-2">
@@ -52,7 +52,7 @@ const RecipeGenerator: React.FC = () => {
                 <input
                   type="text"
                   id="preferences"
-                  className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-farm-orange focus:ring-farm-orange sm:text-lg px-4 py-3 border"
+                  className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-farm-orange focus:ring-farm-orange sm:text-lg px-4 py-3 border bg-white/90"
                   placeholder="Ej: espinacas, queso, algo rápido para cenar..."
                   value={preferences}
                   onChange={(e) => setPreferences(e.target.value)}

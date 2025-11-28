@@ -9,7 +9,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products, onAddToCart }) => {
   return (
-    <div className="bg-white py-12">
+    <div className="bg-white/90 backdrop-blur-sm py-12 border-t border-b border-white/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-serif font-bold text-gray-900 sm:text-4xl">Nuestros Productos</h2>
@@ -20,7 +20,7 @@ const ProductList: React.FC<ProductListProps> = ({ products, onAddToCart }) => {
 
         <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
           {products.map((product) => (
-            <div key={product.id} className="group relative bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden">
+            <div key={product.id} className="group relative bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
               <div className="aspect-w-4 aspect-h-3 bg-gray-200 group-hover:opacity-95 transition-opacity h-64 overflow-hidden">
                 <img
                   src={product.image}
